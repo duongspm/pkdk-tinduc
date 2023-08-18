@@ -1,0 +1,74 @@
+#pagetop {
+    position: fixed;
+    right: 2em;
+    bottom: 2em;
+    z-index: 99;
+    cursor: pointer;
+    display: none;
+    padding: 15px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    transition: 0.2s all;
+    opacity: 0.8;
+}
+
+#pagetop::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    width: 105%;
+    height: 105%;
+    filter: blur(24px);
+    background: var(--color-primary);
+    border-radius: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    /* animation: arrows 1.5s linear infinite; */
+}
+
+/* #pagetop i {
+    font-size: 1.5rem;
+    color: var(--color-secon);
+    position: relative;
+    z-index: 2;
+} */
+.gg-arrow-up {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs, 1));
+    width: 22px;
+    height: 22px
+}
+
+.gg-arrow-up::after,
+.gg-arrow-up::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    top: 4px
+}
+
+.gg-arrow-up::after {
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(45deg);
+    left: 7px
+}
+
+.gg-arrow-up::before {
+    width: 2px;
+    height: 16px;
+    left: 10px;
+    background: currentColor
+}
+
+#pagetop:hover {
+    opacity: 1;
+}

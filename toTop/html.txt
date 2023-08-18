@@ -1,0 +1,3 @@
+    <div id="pagetop" class="pagetop">
+        <i class="gg-arrow-up"></i>
+    </div>
